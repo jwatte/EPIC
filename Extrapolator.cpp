@@ -123,7 +123,7 @@ bool Extrapolator<Count, Type>::ReadPosition(double forTime, Type oPos[Count], T
     oPos[i] = (Type)(snapPos_[i] + oVel[i] * (forTime - snapTime_));
   }
   if (!ok) {
-    memset(oVel, 0, sizeof(oVel));
+    memset(oVel, 0, sizeof(Type) * Count);
   }
 
   return ok;
